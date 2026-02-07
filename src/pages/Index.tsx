@@ -111,7 +111,7 @@ const Index = () => {
 
       {/* Header */}
       <header className="p-4 border-b border-border bg-card/30">
-        <div className="container max-w-6xl mx-auto flex items-start justify-between">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center sm:items-start justify-between gap-4 px-4">
           <h1 className="font-bold text-casino-gold tracking-wide text-lg">
             p0kerb3ta
           </h1>
