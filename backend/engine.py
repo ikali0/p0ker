@@ -1,5 +1,6 @@
 import random
-from config import Config
+from .config import Config  # <-- FIXED relative import
+
 
 class GameEngine:
     def __init__(self, config: Config):
@@ -34,9 +35,13 @@ class GameEngine:
             self.config.ante
         )
 
-        house_edge = self.house_net / total_input
+        house_edge = (
+            self.house_net / total_input
+            if total_input > 0
+            else 0.0
+        )
 
         return {
             "house_net": round(self.house_net, 2),
-            "house_edge": round(house_edge, 4)
+            "house_edge": round(house_edge, 4),
         }
