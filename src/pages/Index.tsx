@@ -133,8 +133,8 @@ const Index = () => {
 
           {/* Table */}
           <div className="flex-1 h-full flex-col flex items-center justify-start">
-            <div className="felt-texture p-8 w-full max-w-3xl border px-[16px] py-[16px] rounded-sm border-dashed shadow-sm border-fuchsia-500">
-              {!showHands ? <div className="text-center py-24">
+            <div className="felt-texture p-8 w-full max-w-3xl border px-[16px] py-[16px] rounded-sm border-dashed shadow-sm border-fuchsia-500 bg-fuchsia-400">
+              {!showHands ? <div className="text-center py-[77px]">
                   <h2 className="text-3xl font-bold mb-2 text-popover-foreground">
                     Ready to Play?
                   </h2>
