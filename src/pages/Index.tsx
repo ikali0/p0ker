@@ -112,9 +112,9 @@ const Index = () => {
       {/* Header */}
       <header className="p-4 border-b border-border bg-card/30">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center sm:items-start justify-between gap-4 px-4">
-          <h1 className="font-bold text-casino-gold tracking-wide text-lg">
-            p0kerb3ta
-          </h1>
+          <h1 className="font-bold tracking-wide text-lg text-purple-400">Alien Poker
+
+        </h1>
 
           <div className="flex items-center gap-3">
             <AchievementsPanel achievements={achievements.achievements} unlockedCount={achievements.unlockedCount} totalCount={achievements.totalCount} />
