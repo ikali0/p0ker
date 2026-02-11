@@ -1,13 +1,12 @@
 # Poker-Tube (“Alien” Poker Software)
+## Prototype 1: https://alienpoker.lovable.app/
+## Prototype 2: https://alienp0ker.lovable.app/
 
 ## Deterministic Adaptive Poker Economy Engine
-
 ### System Design, Architecture & Simulation Framework
 
 **Version 1.0 — Production-Grade Prototype Specification**
-
 # 1. System Classification
-
 **System Type:**
 Financial-grade deterministic simulation engine with dynamic liquidity-based payout pools.
 
@@ -15,7 +14,6 @@ This is not simply a poker game.
 It is a configurable wagering economy framework with programmable volatility and tunable house edge.
 
 Core characteristics:
-
 * Deterministic strategy logic
 * Liquidity-pool payout architecture
 * Simulation-first validation
@@ -27,28 +25,22 @@ Core characteristics:
 
 1. Determinism First
    Identical input state produces identical output state.
-
 2. Economic Isolation
    Decision logic (HT engine) is separated from payout logic (Tube engine).
-
 3. Simulation-Driven Governance
    All parameter changes must be validated via large-run simulation before activation.
-
 4. Configurable Risk Surface
    House edge, volatility, and liquidity elasticity must be tunable.
-
 5. Modular Replaceability
    Every major subsystem must be swappable without refactoring core logic.
 
 # 3. Core Game Model
-
 ## 3.1 Participants
 
 * 1 Dealer (house-controlled agent)
 * N Players (default = 4, configurable)
 
 ## 3.2 Round Structure
-
 Each round executes deterministically:
 
 1. Collect antes
@@ -63,9 +55,7 @@ Each round executes deterministically:
 10. Log structured metrics
 
 ## 3.3 Objective
-
 Players attempt to beat the dealer’s final 5-card hand.
-
 House revenue derives from:
 
 * Play pot outcomes
@@ -75,7 +65,6 @@ House revenue derives from:
 # 4. Deterministic Hold Type (HT) Engine
 
 ## 4.1 Purpose
-
 The HT engine replaces player discretion with deterministic mapping from hand state → hold decision.
 
 This ensures:
@@ -85,10 +74,7 @@ This ensures:
 * Controlled EV distribution
 * Elimination of skill variance
 
----
-
 ## 4.2 Formal HT Structure
-
 Each Hold Type must maintain:
 
 ```
@@ -121,8 +107,6 @@ Evaluation must follow strict ordering:
 
 No randomness permitted.
 
----
-
 ## 4.4 Decision Output Schema
 
 ```
@@ -150,8 +134,6 @@ Monte Carlo validation mode:
 * Skew and tail risk evaluation
 * Tube interaction frequency
 
----
-
 # 5. Stack Tube Economic Engine
 
 ## 5.1 Conceptual Model
@@ -167,8 +149,6 @@ Active Tubes:
 * RF (Royal Flush)
 
 These function as dynamic payout pools.
-
----
 
 ## 5.2 Tube Object Definition
 
@@ -223,7 +203,6 @@ IF balance > upper_bound:
 ```
 
 ## 5.5 Economic Metrics Per 20,000 Rounds
-
 * House net profit
 * House edge %
 * Volatility index (σ of round deltas)
@@ -232,9 +211,7 @@ IF balance > upper_bound:
 * Refill frequency
 
 # 6. Round Resolution Engine
-
 ## 6.1 Flow
-
 1. Collect antes
 2. Execute HT logic
 3. Redraw
@@ -246,7 +223,6 @@ IF balance > upper_bound:
 9. Apply bust penalty
 
 ## 6.2 Configurable Controls
-
 * Dealer_Draw_Allowed
 * Dealer_Bust_Allowed
 * DealerWinsOnTie
@@ -272,15 +248,12 @@ IF balance > upper_bound:
 ```
 
 # 7. Mass Simulation & Analytics Engine
-
 ## 7.1 Modes
-
 * Deterministic 20k run
 * Monte Carlo 100k+
 * Multi-run batch stress test
 
 ## 7.2 Global Metrics
-
 * Total antes
 * Total payouts
 * House net
@@ -288,7 +261,6 @@ IF balance > upper_bound:
 * Player aggregate net
 
 ## 7.3 Per-HT Metrics
-
 * Usage %
 * Win %
 * Loss %
@@ -298,7 +270,6 @@ IF balance > upper_bound:
 * Tube trigger frequency
 
 ## 7.4 Anomaly Detection
-
 Flags triggered if:
 
 * HT EV > +2%
@@ -310,7 +281,6 @@ Flags triggered if:
 Structured exploit report returned.
 
 # 8. Adaptive Edge Control System
-
 ## 8.1 Target
 
 Maintain:
@@ -328,9 +298,6 @@ HouseEdge =
     (Total_Antes - Total_Payouts)
     / Total_Antes
 ```
-
----
-
 ## 8.3 Adjustment Loop
 
 ```
@@ -383,7 +350,6 @@ tube_poker/
 ```
 
 # 10. UI/UX System Layer
-
 ## Design Philosophy
 
 * Dark casino aesthetic
@@ -417,7 +383,6 @@ tube_poker/
 * Export functionality
 
 # 11. Current Prototype Capabilities
-
 ✔ Deterministic core engine
 ✔ Liquidity-based payout pools
 ✔ Simulation loop (20k rounds)
@@ -426,7 +391,6 @@ tube_poker/
 ✔ Exploit detection framework
 
 # 12. Expansion Roadmap
-
 * Full combinatorics evaluator
 * Reinforcement learning HT optimizer
 * Real-time multiplayer backend
@@ -437,7 +401,6 @@ tube_poker/
 # Final Assessment
 
 Poker-Tube is a deterministic wagering economy engine featuring:
-
 * Controlled volatility
 * Tunable house edge
 * Liquidity-based payout modeling
@@ -446,14 +409,12 @@ Poker-Tube is a deterministic wagering economy engine featuring:
 * Modular AI extensibility
 
 It is suitable for:
-
 * Operator licensing
 * Research simulation
 * Volatility-controlled skill games
 * Multiplayer wagering platforms
 
 BETA 2.0 STEPS:
-
 • Formalize the mathematical volatility model
 • Write the regulatory compliance framework
 • Architect Kubernetes deployment topology
