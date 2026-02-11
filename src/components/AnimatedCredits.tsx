@@ -59,7 +59,7 @@ export function AnimatedCredits({ value, className }: AnimatedCreditsProps) {
       
       <div className="relative">
         <span
-          className={cn("text-lg sm:text-2xl font-bold tabular-nums transition-transform text-purple-400",
+          className={cn("text-lg font-bold tabular-nums transition-transform text-purple-400 sm:text-xs",
 
           isAnimating && changeAmount > 0 && 'animate-credits-pop'
           )}>
