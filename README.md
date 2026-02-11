@@ -89,10 +89,7 @@ HT {
 }
 ```
 
----
-
 ## 4.3 Priority Hierarchy
-
 Evaluation must follow strict ordering:
 
 1. Made hands
@@ -118,10 +115,7 @@ No randomness permitted.
 }
 ```
 
----
-
 ## 4.5 HT Simulation Validation
-
 Monte Carlo validation mode:
 
 * 100,000+ hand runs
@@ -285,8 +279,6 @@ Maintain:
 0.03 ≤ HouseEdge ≤ 0.07
 ```
 
----
-
 ## 8.2 Control Equation
 
 ```
@@ -409,7 +401,6 @@ It is suitable for:
 * Research simulation
 * Volatility-controlled skill games
 * Multiplayer wagering platforms
-
 BETA 2.0 STEPS:
 • Formalize the mathematical volatility model
 • Write the regulatory compliance framework
