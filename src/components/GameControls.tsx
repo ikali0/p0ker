@@ -33,7 +33,7 @@ export function GameControls({
       {/* Credit Display with Animation */}
       <div className="text-center">
         <AnimatedCredits value={credits} className="justify-center" />
-        <div className="text-[10px] sm:text-xs uppercase tracking-wider mt-1 my-[2px] text-purple-400">
+        <div className="text-[10px] sm:text-xs uppercase tracking-wider mt-1 my-[2px] text-secondary-foreground">
           Credits
         </div>
       </div>
