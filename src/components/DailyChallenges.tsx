@@ -42,7 +42,7 @@ export function DailyChallenges({
         return <div key={challenge.id} className={cn("p-3 rounded-lg border transition-all px-[8px] py-[8px] border-purple-500 border-dashed", challenge.claimed ? 'bg-muted/30 border-muted opacity-60' : challenge.completed ? 'bg-casino-gold/10 border-casino-gold/30' : 'bg-muted/50 border-border')}>
               <div className="flex items-start justify-between gap-2">
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2">
+                  <div className="gap-[4px] flex items-start justify-start">
                     <span className="font-medium text-sm text-foreground truncate">
                       {challenge.title}
                     </span>

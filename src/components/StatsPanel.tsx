@@ -58,7 +58,7 @@ export function StatsPanel({
           <div className={cn("text-2xl font-bold tabular-nums text-purple-500", Number(returnPercent) >= 100 ? 'text-accent' : 'text-foreground')}>
             {returnPercent}%
           </div>
-          <div className="text-xs text-muted-foreground uppercase">
+          <div className="text-xs uppercase text-secondary-foreground">
             Return Rate
           </div>
         </div>
